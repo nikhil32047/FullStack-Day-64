@@ -1,0 +1,56 @@
+Day 64:
+===========
+
+Regex Object – Quick Revision
+==================================
+A Regex object is created using re.compile() to store a pattern for repeated use.
+It improves performance and code readability when the same pattern is used multiple times.
+
+import re
+pattern = re.compile(r"\d{10}")
+
+Why Use Regex Objects?
+
+Reusability of patterns
+
+Faster execution
+
+Cleaner code structure
+
+Common Methods on Regex Object
+fullmatch()
+
+Matches the entire string.
+
+pattern.fullmatch("9876543210")
+
+match()
+
+Matches only from the start.
+
+pattern.match("9876543210")
+
+search()
+
+Searches anywhere in the string.
+
+pattern.search("Mobile: 9876543210")
+
+findall()
+
+Returns all matches.
+
+pattern.findall("123 456 789")
+
+finditer()
+
+Returns iterator with match details.
+
+for m in pattern.finditer("9876543210"):
+    print(m.start(), m.end(), m.group())
+
+Real-Time Examples
+✔ Mobile number validation
+✔ Email/Gmail validation
+✔ Web scraping data extraction
+✔ Form input validation
